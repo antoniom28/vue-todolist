@@ -1,3 +1,9 @@
+#user-input *{
+    border: 1px solid gray;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
 button{
     cursor: pointer;
 }
@@ -5,6 +11,7 @@ button{
 .elimina{
     cursor: pointer;
     align-self: end;
+    transform: scale(1.5);
 }
 
 .list-item{
