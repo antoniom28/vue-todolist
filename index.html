@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -7,14 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="root">
-        
+
         <input @keyup.enter="addText()" type="text" v-model='testo'>
         <button @click="addText()">Aggiungi</button>
 
         <p :class="{'element-done' : elemento.done}" v-model="testo" v-for="(elemento,index) in toDoList">
-            <span  @click="doneOrNot(index)">{{elemento.text}}</span> 
+            <span @click="doneOrNot(index)">{{elemento.text}}</span>
             <i @click="togli(index)" class="fas fa-times elimina"></i>
         </p>
     </div>
@@ -22,4 +24,5 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
