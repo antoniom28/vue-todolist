@@ -1,0 +1,11 @@
+button{
+    cursor: pointer;
+}
+
+.elimina{
+    cursor: pointer;
+}
+
+.element-done{
+    text-decoration:line-through;
+}
