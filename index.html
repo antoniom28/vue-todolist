@@ -12,13 +12,19 @@
 <body>
     <div id="root">
 
-        <input @keyup.enter="addText()" type="text" v-model='testo'>
-        <button @click="addText()">Aggiungi</button>
+        <div id="user-input">
+            <input @keyup.enter="addText()" type="text" v-model='testo'>
+            <button @click="addText()">Aggiungi</button>
+        </div>
 
-        <p :class="{'element-done' : elemento.done}" v-model="testo" v-for="(elemento,index) in toDoList">
-            <span @click="doneOrNot(index)">{{elemento.text}}</span>
-            <i @click="togli(index)" class="fas fa-times elimina"></i>
-        </p>
+        <!-- dando la classe dinamica allo span si evita di "sottolineare" l'elemento alla 
+        cancellazione dell'elemento sopra -->
+        <div id="user-list">
+            <p class="list-item" v-model="testo" v-for="(elemento,index) in toDoList">
+                <span @click="doneOrNot(index)" :class="{'element-done' : elemento.done}">{{elemento.text}}</span>
+                <i @click="togli(index)" class="fas fa-times elimina"></i>
+            </p>
+        </div>
     </div>
     <script src="https://kit.fontawesome.com/8f1b5398cd.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

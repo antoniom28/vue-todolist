@@ -4,8 +4,40 @@ button{
 
 .elimina{
     cursor: pointer;
+    align-self: end;
+}
+
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin: 10px 15px;
+    padding: 5px 10px;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
 }
 
 .element-done{
     text-decoration:line-through;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#user-list {
+    margin-top: 20px;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+div#user-list span{
+    width: 100%;
 }
